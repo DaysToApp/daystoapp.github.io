@@ -17,6 +17,9 @@ section#landing {
   align-items: center;
   justify-content: center;
 }
+.w100pct {
+  width: 100%;
+}
 .h1 {
   font-size: clamp(40px, 5vw, 70px);
   font-weight: 700;
