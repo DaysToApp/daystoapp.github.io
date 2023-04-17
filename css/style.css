@@ -48,7 +48,7 @@ section#landing {
   padding-bottom: 10px;
 }
 .themeColor {
-  color: #331ba8;
+  color: #0d47b5;
 }
 #wrpLanding {
   display: flex;
@@ -147,7 +147,7 @@ section#landing {
 #txtAppName {
   font-size: clamp(24px, 2.5vw, 32px);
   font-weight: 700;
-  color: #331ba8;
+  color: #0d47b5;
   text-align: center;
 /*  margin-top: clamp(5px, 0.8vw, 10px);*/
 }
@@ -343,7 +343,7 @@ section#screenshots {
   background-image: url(../images/ss_upcoming.png);
 }
 #wrpScreenshots > .screenshot:nth-child(2) {
-  background-image: url(../images/ss_done.png);
+  background-image: url(../images/ss_archiveBox.png);
 }
 #wrpScreenshots > .screenshot:nth-child(3) {
   background-image: url(../images/ss_past.png);
