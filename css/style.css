@@ -4,7 +4,9 @@ body {
 section#landing {
   width: 100vw;
   height: 100vh;
-  background-color: #f9f9f9;
+  background-image: url(../images/bg1.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
 }
 .wrapper {
   width: 100vw;
@@ -17,21 +19,26 @@ section#landing {
   align-items: center;
   justify-content: center;
 }
-.w100pct {
-  width: 100%;
-}
 .h1 {
-  font-size: clamp(40px, 5vw, 70px);
-  font-weight: 700;
-  line-height: 1.5;
+  font-size: clamp(20px, 4vw, 35px);
+  line-height: 1.2;
 }
 .h3 {
   font-size: 1.15em;
   font-weight: 500;
   padding-bottom: 5px;
 }
+.center {
+  text-align: center;
+}
+.white {
+  color: white;
+}
 .gray {
   color: gray;
+}
+.bold {
+  font-weight: bold;
 }
 .italic {
   font-style: italic;
@@ -48,7 +55,7 @@ section#landing {
   padding-bottom: 10px;
 }
 .themeColor {
-  color: #0d47b5;
+  color: #331ba8;
 }
 #wrpLanding {
   display: flex;
@@ -75,6 +82,12 @@ section#landing {
     width: 100%;
     height: 100%;
   }
+  section#wrpExpandedRow {
+    height: calc(100vh - 75vw);
+  }
+  section#wrpExpandedRow .wrapper {
+    padding: 15px 0;
+  }
 }
 #wrpLanding > div.first {
   display: flex;
@@ -89,7 +102,7 @@ section#landing {
   background-position: center 9vh;
 }
 #wrpLanding > div.second {
-  background-image: url(../images/appOniPhone.png);
+  background-image: url(../images/fullImage.png);
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
@@ -119,19 +132,25 @@ section#landing {
   #txtAppName {
     font-size: 18px !important;
   }
-  .h1 {
-    font-size: clamp(36px, 10vw, 70px);
-    line-height: 7vh;
-  }
   #wrpAppStoreButton {
     margin-top: 5vh !important;
   }
-
+  section#wrpExpandedRow {
+    height: calc(100vw + 70px);
+    padding: 30px 0;
+  }
+  #leftRows > div:not(:first-child) {
+    display: none;
+  }
+  .sectionTitle {
+    font-size: 1.6em
+  }
 }
 
 #wrpLogo {
-  width: 30%;
-  margin-top: 8vh;
+  width: clamp(70px, 15vw, 100px);
+  margin-top: clamp(2vh, 3vw, 8vh);
+  margin-bottom: clamp(2vh, 3vw, 4vh);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,17 +158,17 @@ section#landing {
 #imgLogo {
   width: 100%;
   height: 15vh;
-  background-image: url(../images/icon-frame.png);
+  background-image: url(../images/appLogoFrame.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 100%;
 }
 #txtAppName {
   font-size: clamp(24px, 2.5vw, 32px);
   font-weight: 700;
-  color: #0d47b5;
+  color: #331ba8;
   text-align: center;
-/*  margin-top: clamp(5px, 0.8vw, 10px);*/
+  margin-top: clamp(10px, 0.8vw, 15px);
 }
 #wrpAppStoreButton {
   display: flex;
@@ -159,11 +178,12 @@ section#landing {
   width: 100%;
 }
 #appStoreBatchLabel {
-  color: #666;
+  color: #ffffffcc;
   padding-bottom: 10px;
+  font-size: clamp(0.9em, 3vw, 1em);
 }
 #appStoreBadge {
-  width: 100%;
+  width: 120px;
   height: 40px;
   background-image: url("../images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg");
   background-size: 120px 40px;
@@ -174,16 +194,62 @@ section#landing {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  height: 600px;
+  gap: 6vw;
 }
 #eventRowSection > div:first-child {
-  width: 50%;
+  width: 33%;
   display: flex;
   justify-content: center;
+  color: #0d47b5;
 }
 #eventRowSection > div:last-child {
-  width: 50%;
-  padding-left: 6vw;
+  width: 67%;
+  height: 100%;
+  background-image: url(../images/rowImage.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (orientation: portrait) {
+  #eventRowSection {
+    height: calc(100vh - 75vw - 30px);
+  }
+}
+#leftRows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#leftRows > div:first-child {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+#leftRows > div:not(:first-child) {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+#leftRows > div:nth-child(2) {
+  background-image: url(../images/icons/doc.plaintext.svg);
+}
+#leftRows > div:nth-child(3) {
+  background-image: url(../images/icons/map.svg);
+}
+#leftRows > div:nth-child(4) {
+  background-image: url(../images/icons/car.svg);
+}
+#leftRows > div:nth-child(5) {
+  background-image: url(../images/icons/bell.badge.svg);
+}
+#leftRows > div:nth-child(6) {
+  background-image: url(../images/icons/repeat.svg);
+}
+#leftRows > div:nth-child(7) {
+  background-image: url(../images/icons/globe.svg);
 }
 #wrpEventRow {
   position: relative;
@@ -195,7 +261,7 @@ section#landing {
 }
 @media (orientation: portrait) {
   #imgLogo {
-    height: 10vw;
+    height: 12vw;
   }
 }
 #imgExpandable {
@@ -242,7 +308,7 @@ section#landing {
     margin: 30px auto;
   }
   #eventRowSection {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   #eventRowSection > div {
     width: 100vw !important;
@@ -343,7 +409,7 @@ section#screenshots {
   background-image: url(../images/ss_upcoming.png);
 }
 #wrpScreenshots > .screenshot:nth-child(2) {
-  background-image: url(../images/ss_archiveBox.png);
+  background-image: url(../images/ss_done.png);
 }
 #wrpScreenshots > .screenshot:nth-child(3) {
   background-image: url(../images/ss_past.png);
@@ -377,6 +443,9 @@ section#screenshots {
   }
 }
 
+#privacy_policy {
+  background-color: #eee;
+}
 #wapPrivacyPolicy div {
   width: 100%;
   text-align: center;
@@ -393,4 +462,5 @@ footer {
   width: 100%;
   padding: 50px 0 20px 0;
   text-align: center;
+  background-color: #eee;
 }
