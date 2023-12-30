@@ -448,14 +448,49 @@ section#screenshots {
 }
 #wapPrivacyPolicy div {
   width: 100%;
-  text-align: center;
 }
 #policyContent {
+  font-size: 18px;
   width: 90%;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.5;
   padding: 30px 15px 0 15px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 30px;
+  text-align: center;
+}
+h5 {
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.sectionWrapper {
+  width: 90%;
+  max-width: 670px;
+  text-align: center;
+}
+#privacy_policy .sectionWrapper {
+  text-align: left;
+}
+#policyContent p, #policyContent li {
+  font-weight: 300;
+}
+#policyContent ol {
+  padding-inline-start: 25px;
+}
+#policyContent ol > li:not(:first-child) {
+  margin-top: 10px;
+}
+#policyContent .strong {
+  font-weight: 500;
+}
+#effectiveDate {
+  font-size: 0.8em;
+  text-align: right;
 }
 
 footer {
