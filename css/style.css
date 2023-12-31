@@ -7,6 +7,17 @@ section#landing {
   background-image: url(../images/bg1.jpg);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+
+  animation: animBg 40s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes animBg {
+  0% { background-image: url(../images/bg1.jpg); }
+  45% { background-image: url(../images/bg1.jpg); }
+  50% { background-image: url(../images/bg5.jpg); }
+  95% { background-image: url(../images/bg5.jpg); }
 }
 .wrapper {
   width: 100vw;
@@ -102,7 +113,18 @@ section#landing {
   background-position: center 9vh;
 }
 #wrpLanding > div.second {
-  background-image: url(../images/fullImage.png);
+  background-image: url(../images/listView.png);
+
+  animation: animContent 40s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes animContent {
+  0% { background-image: url(../images/listView.png); }
+  45% { background-image: url(../images/listView.png); }
+  50% { background-image: url(../images/monthView.png); }
+  95% { background-image: url(../images/monthView.png); }
 }
 
 @media (max-width: 480px) and (orientation: portrait) {

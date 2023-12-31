@@ -7,7 +7,6 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
@@ -50,9 +49,6 @@
               <div></div>
               <div></div>
             </div>
-
-            <!-- <div id="imgExpandable"></div> -->
-
           </div>
           <!-- Right -->
           <div class="right">
@@ -60,17 +56,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Screenshots -->
-    <!-- <section id="screenshots">
-      <div class="wrapper">
-        <div id="wrpScreenshots">
-        <div class="screenshot"><div class="ssTitle">Upcoming Events</div></div>
-        <div class="screenshot"><div class="ssTitle">Done Events</div></div>
-        <div class="screenshot"><div class="ssTitle">Past Events</div></div>
-        <div class="screenshot"><div class="ssTitle">Calendar List</div></div>
-      </div>
-    </section> -->
 
     <!-- Privacy Policy -->
     <section id="privacy_policy">
@@ -121,7 +106,10 @@
     </section>
 
     <footer>
-      © 2024 tomoharu arakawa
+      © <span id="year"></span> tomoharu arakawa
     </footer>
   </body>
+  <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </html>
